@@ -1,0 +1,9 @@
+*~
+*.obj
+*.exe
+*.ilk
+*.map
+*.pdb
+*.idb
+.sconsign.dblite
+#*
