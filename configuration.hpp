@@ -5,6 +5,8 @@
 class Configuration
 {
 public:
+  virtual ~Configuration()
+  {}
 
 private:
 

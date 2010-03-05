@@ -2,9 +2,10 @@
 #ifndef context_hpp
 #define context_hpp
 
+#include "context_interface.hpp"
 #include "configuration.hpp"
 
-class Context
+class Context : public ContextInterface
 {
 private:
   Configuration *configuration_;
@@ -15,7 +16,10 @@ public:
 
   }
 
-  Configuration* getConfiguration();
+  Configuration* getConfiguration()
+  {
+    return 0;
+  }
   
 
 };
