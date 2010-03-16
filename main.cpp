@@ -22,7 +22,8 @@ void main()
   models.push_back(model2);
 
   Configuration *config = new Configuration();
-  ContextInterface *context = new Context(config);
+  TransientParameters *tp = new TransientParameters();
+  ContextInterface *context = new Context(config, tp);
 
   vector<ModelInterface *>::iterator itr;
   for (itr = models.begin(); itr != models.end(); ++itr)
@@ -35,6 +36,7 @@ void main()
     (*itr)->close();
 
   delete config;
+  delete tp;
   delete model1;
   delete model2;
   delete context;

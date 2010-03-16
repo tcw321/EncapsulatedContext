@@ -3,22 +3,30 @@
 #define context_hpp
 
 #include "context_interface.hpp"
+#include "transient_parameters.hpp"
 #include "configuration.hpp"
 
 class Context : public ContextInterface
 {
 private:
   Configuration *configuration_;
+  TransientParameters *transientParameters_;
 
 public:
-  Context(Configuration *config) : configuration_(config)
+  Context(Configuration *config, TransientParameters *tp) : configuration_(config),
+							   transientParameters_(tp)
   {
 
   }
 
   Configuration* getConfiguration()
   {
-    return 0;
+    return configuration_;
+  }
+
+  TransientParameters* getTransientParameters()
+  {
+    return transientParameters_;
   }
   
 
